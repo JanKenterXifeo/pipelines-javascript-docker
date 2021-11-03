@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jankenterxifeopipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jankenterxifeopipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: jankenterxifeopipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: jankenterxifeopipelinesjavascriptdocker 
+          image: mycontainerregistry0311.azurecr.io/jankenterxifeopipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
